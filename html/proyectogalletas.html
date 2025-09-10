@@ -71,30 +71,27 @@
       font-weight: 600;
     }
 
-    /* Carrusel */
-    .carousel-container {
-      max-width: 800px; /* ancho máximo del carrusel */
-      margin: 0 auto 40px auto; /* centrado horizontal con margen abajo */
+    /* Video centrado */
+    .video-container {
+      max-width: 800px;
+      margin: 0 auto 50px auto;
+      text-align: center;
     }
 
-    .carousel-item img {
-      border-radius: 15px;
+    .video-container iframe {
       width: 100%;
-      height: 400px; /* altura fija para todas las imágenes */
-      object-fit: cover; /* recorta y mantiene proporción */
+      height: 450px; /* tamaño mediano-grande */
+      border-radius: 15px;
     }
 
-    /* Flechas del carrusel negras */
-    .carousel-control-prev-icon,
-    .carousel-control-next-icon {
-      background-color: black; /* color negro */
-      border-radius: 50%; /* opcional, círculo */
-      width: 40px;
-      height: 40px;
-      background-size: 100%, 100%;
+    .video-title {
+      color: #4facfe;
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+      font-weight: 600;
     }
 
-        /* Botón regresar */
+    /* Botón regresar */
 .btn-back {
   display: inline-block;       /* inline-block permite que se alinee a la izquierda */
   margin: 20px 0;              /* margen arriba y abajo */
@@ -109,50 +106,26 @@
   background-color: #3a95e0;
   color: white;
 }
-
   </style>
 </head>
 <body>
 
   <!-- Header -->
   <header class="text-center py-5">
-    <h1>Proyecto Brotes</h1>
+    <h1>Tienda online para galletas</h1>
     <p>Desarrollo de sistema web con NodeJS, Angular y MongoDB Atlas</p>
-    <a href="https://brotes-umg.web.app" class="btn btn-light">Visitar Proyecto</a>
+    <a href="" class="btn btn-light">Visitar Proyecto</a>
   </header>
 
   <br><br>
 
   <!-- Botón regresar -->
   <a href="../index.html" class="btn-back">← Regresar</a>
-  
 
-  <!-- Carrusel centrado -->
-  <div class="carousel-container">
-    <div id="proyectosCarrusel" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="../assets/img/paginainiciobrotes.png" class="d-block w-100" alt="Proyecto 1">
-        </div>
-        <div class="carousel-item">
-          <img src="../assets/img/paginaclientebrotes.png" class="d-block w-100" alt="Proyecto 2">
-        </div>
-        <div class="carousel-item">
-          <img src="../assets/img/paginaadministradorbrotes.png" class="d-block w-100" alt="Proyecto 3">
-        </div>
-        <div class="carousel-item">
-          <img src="../assets/img/paginahistorialbrotes.png" class="d-block w-100" alt="Proyecto 4">
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#proyectosCarrusel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Anterior</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#proyectosCarrusel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Siguiente</span>
-      </button>
-    </div>
+  <!-- Video centrado -->
+  <div class="video-container">
+    <div class="video-title">Explicación Video</div>
+    <iframe src="https://www.youtube.com/embed/-qJzh6JlBGQ" title="Video Explicación" frameborder="0" allowfullscreen></iframe>
   </div>
 
   <!-- Función de cada usuario -->
@@ -163,25 +136,33 @@
         <thead>
           <tr>
             <th>Rol</th>
-            <th>Credenciales</th>
             <th>Funciones principales</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>ADMIN</td>
-            <td>admin@gmail.com <br> 123456@Intecap</td>
-            <td>- Agregar tipos de plantas<br>- Gestionar empresas y sucursales<br>- Crear empleados y clientes</td>
+            <td>- Lleva el control de los usuarios<br>- Puede agregar diferentes sucursales<br>- Puede agregar diferentes categorias de productos<br>-Agrega caja a diferentes sucursales<br>-Puede editar su perfil</td>
+          </tr>
+          <tr>
+            <td>GESTOR</td>
+            <td>- Lleva control de inventario<br>- Agregar productos a diferentes categorias<br>- Controlar stock <br>Ver gráfica de ventas</td>
           </tr>
           <tr>
             <td>CLIENTE</td>
-            <td>maria@solis.com <br> 123456@Intecap</td>
-            <td>- Ver tipos de plantas<br>- Agregar plantas a sucursales<br>- Interacción con empleados vía chat</td>
+            <td>- Puede agregar productos a su carrito<br>- Puede realizar pedido<br>- Puede elegir si lo quiere pagar con crédito o efectivo <br> Puede ver una factura de su pedido al generarlo</td>
           </tr>
-          <tr>
-            <td>EMPLEADO</td>
-            <td>sergio@gmail.com <br> 123456@Intecap</td>
-            <td>- Ver plantas de clientes<br>- Actualizar estado de plantas<br>- Gestionar historial de chat con clientes</td>
+           <tr>
+            <td>CAJERO</td>
+            <td>- Puede ver pedidos generados  <br> - Puede cambiar el estado de los pedidos <br>-Puede agregar pedidos a repartidores libres <br> -Asigna dinero a repartidores si se genero el pedido en efectivo </td>
+          </tr>
+           <tr>
+            <td>REPARTIDOR</td>
+            <td>- Puede ver el pedido generado<br>- Deja el pedido y lleva un historial de los pedidos que ha llevado </td>
+          </tr>
+           <tr>
+            <td>FACTURADOR</td>
+            <td>- Lleva control de las facturas generadas<br>- Lleva control de los movimientos caja<br>- Lleva control de inventario</td>
           </tr>
         </tbody>
       </table>
@@ -204,19 +185,19 @@
         <tbody>
           <tr>
             <td>
-              <a href="https://github.com/axeljavier-alvarez/BROTES-BACKEND-COMPLETE.git" target="_blank">
+              <a href="https://github.com/axeljavier-alvarez/GALLETAS-BACKEND.git" target="_blank">
                 <img src="../assets/img/backend.png" alt="Repositorio Backend" class="repo-img">
               </a>
               <p>NodeJS, Express, MongoDB, JWT, Render y MongoDB Atlas</p>
             </td>
             <td>
-              <a href="https://github.com/axeljavier-alvarez/FRONTEND-BROTES.git" target="_blank">
+              <a href="https://github.com/axeljavier-alvarez/GALLETAS-FRONTEND.git" target="_blank">
                 <img src="../assets/img/frontend.png" alt="Repositorio Frontend" class="repo-img">
               </a>
               <p>Angular, TypeScript, HTML, SCSS, servicios guard y SweetAlert</p>
             </td>
             <td>
-              <a href="https://brotes-umg.web.app" target="_blank">
+              <a href="" target="_blank">
                 <img src="../assets/img/icono.png" alt="Hosting" class="repo-img">
               </a>
               <p>MongoDB Compass, Render y Firebase</p>
