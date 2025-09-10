@@ -17,8 +17,12 @@
     }
 
     /* Títulos */
-    h1, h2, h3, h4, h5 {
+    h1, h3, h4, h5 {
       color: white;
+    }
+
+    h2 {
+      color: #4facfe;
     }
 
     /* Encabezados de tabla */
@@ -66,6 +70,29 @@
       color: #0d3b66;
       font-weight: 600;
     }
+
+    /* Carrusel */
+    .carousel-container {
+      max-width: 800px; /* ancho máximo del carrusel */
+      margin: 0 auto 40px auto; /* centrado horizontal con margen abajo */
+    }
+
+    .carousel-item img {
+      border-radius: 15px;
+      width: 100%;
+      height: 400px; /* altura fija para todas las imágenes */
+      object-fit: cover; /* recorta y mantiene proporción */
+    }
+
+    /* Flechas del carrusel negras */
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      background-color: black; /* color negro */
+      border-radius: 50%; /* opcional, círculo */
+      width: 40px;
+      height: 40px;
+      background-size: 100%, 100%;
+    }
   </style>
 </head>
 <body>
@@ -77,10 +104,39 @@
     <a href="https://brotes-umg.web.app" class="btn btn-light">Visitar Proyecto</a>
   </header>
 
+  <br><br>
+
+  <!-- Carrusel centrado -->
+  <div class="carousel-container">
+    <div id="proyectosCarrusel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="../assets/img/paginainiciobrotes.png" class="d-block w-100" alt="Proyecto 1">
+        </div>
+        <div class="carousel-item">
+          <img src="../assets/img/paginaclientebrotes.png" class="d-block w-100" alt="Proyecto 2">
+        </div>
+        <div class="carousel-item">
+          <img src="../assets/img/paginaadministradorbrotes.png" class="d-block w-100" alt="Proyecto 3">
+        </div>
+        <div class="carousel-item">
+          <img src="../assets/img/paginahistorialbrotes.png" class="d-block w-100" alt="Proyecto 4">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#proyectosCarrusel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#proyectosCarrusel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
+    </div>
+  </div>
+
   <!-- Función de cada usuario -->
   <section class="container my-5">
     <h2 class="section-title">Función de cada usuario</h2>
-
     <div class="table-container">
       <table class="table table-striped">
         <thead>
@@ -93,36 +149,18 @@
         <tbody>
           <tr>
             <td>ADMIN</td>
-            <td>
-              admin@gmail.com <br> 123456@Intecap
-            </td>
-            <td>
-              - Agregar tipos de plantas<br>
-              - Gestionar empresas y sucursales<br>
-              - Crear empleados y clientes
-            </td>
+            <td>admin@gmail.com <br> 123456@Intecap</td>
+            <td>- Agregar tipos de plantas<br>- Gestionar empresas y sucursales<br>- Crear empleados y clientes</td>
           </tr>
           <tr>
             <td>CLIENTE</td>
-            <td>
-              maria@solis.com <br> 123456@Intecap
-            </td>
-            <td>
-              - Ver tipos de plantas<br>
-              - Agregar plantas a sucursales<br>
-              - Interacción con empleados vía chat
-            </td>
+            <td>maria@solis.com <br> 123456@Intecap</td>
+            <td>- Ver tipos de plantas<br>- Agregar plantas a sucursales<br>- Interacción con empleados vía chat</td>
           </tr>
           <tr>
             <td>EMPLEADO</td>
-            <td>
-              sergio@gmail.com <br> 123456@Intecap
-            </td>
-            <td>
-              - Ver plantas de clientes<br>
-              - Actualizar estado de plantas<br>
-              - Gestionar historial de chat con clientes
-            </td>
+            <td>sergio@gmail.com <br> 123456@Intecap</td>
+            <td>- Ver plantas de clientes<br>- Actualizar estado de plantas<br>- Gestionar historial de chat con clientes</td>
           </tr>
         </tbody>
       </table>
