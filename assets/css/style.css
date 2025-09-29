@@ -1,0 +1,85 @@
+ /* Header y Footer azul oscuro */
+    header, footer {
+      background-color: #0d3b66;
+      color: #fff;
+    }
+    header h1, header p {
+      color: #fff;
+    }
+
+    /* Títulos de secciones */
+    h2, h5 {
+      color: #00f2fe; /* celeste brillante */
+    }
+
+    /* Botones personalizados */
+    .btn-primary {
+      background-color: #4facfe;
+      border-color: #4facfe;
+      transition: 0.3s;
+    }
+    .btn-primary:hover {
+      background-color: #00f2fe;
+      border-color: #00f2fe;
+    }
+
+    .btn-outline-secondary {
+      border-color: #4facfe;
+      color: #4facfe;
+    }
+    .btn-outline-secondary:hover {
+      background-color: #4facfe;
+      color: #fff;
+      border-color: #4facfe;
+    }
+
+    /* Cards coloridas */
+    .card {
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+    }
+    .card-body {
+      background: #e0f7ff;
+      border-radius: 15px;
+    }
+
+    /* Tabla centrada con estilo */
+    .table-container {
+      display: flex;
+      justify-content: center;
+      margin: 50px 0;
+    }
+    table {
+      background: #e0f7ff;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    th {
+      background: #4facfe;
+      color: #fff;
+      text-align: center;
+    }
+    td {
+      text-align: center;
+    }
+    tr:nth-child(even) {
+      background: #d0f0ff;
+    }
+    .texto{
+      text-align: justify;
+    }
+
+    .tech-img {
+  max-width: 120px; /* tamaño máximo uniforme */
+  max-height: 80px; /* ajusta altura máxima */
+  object-fit: contain; /* mantiene proporción sin deformar */
+  margin: 10px auto; /* centrado */
+  display: block;
+}

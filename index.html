@@ -6,82 +6,7 @@
   <title>Portafolio de Axel Javier Alvarez</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
-  <style>
-    /* Header y Footer azul oscuro */
-    header, footer {
-      background-color: #0d3b66;
-      color: #fff;
-    }
-    header h1, header p {
-      color: #fff;
-    }
-
-    /* Títulos de secciones */
-    h2, h5 {
-      color: #00f2fe; /* celeste brillante */
-    }
-
-    /* Botones personalizados */
-    .btn-primary {
-      background-color: #4facfe;
-      border-color: #4facfe;
-      transition: 0.3s;
-    }
-    .btn-primary:hover {
-      background-color: #00f2fe;
-      border-color: #00f2fe;
-    }
-
-    .btn-outline-secondary {
-      border-color: #4facfe;
-      color: #4facfe;
-    }
-    .btn-outline-secondary:hover {
-      background-color: #4facfe;
-      color: #fff;
-      border-color: #4facfe;
-    }
-
-    /* Cards coloridas */
-    .card {
-      border: none;
-      border-radius: 15px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
-    }
-    .card-body {
-      background: #e0f7ff;
-      border-radius: 15px;
-    }
-
-    /* Tabla centrada con estilo */
-    .table-container {
-      display: flex;
-      justify-content: center;
-      margin: 50px 0;
-    }
-    table {
-      background: #e0f7ff;
-      border-radius: 15px;
-      padding: 20px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    }
-    th {
-      background: #4facfe;
-      color: #fff;
-      text-align: center;
-    }
-    td {
-      text-align: center;
-    }
-    tr:nth-child(even) {
-      background: #d0f0ff;
-    }
-  </style>
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
 
@@ -106,54 +31,91 @@
   <!-- Sobre mí -->
   <section class="container my-5">
     <h2 class="mb-4">Sobre mí</h2>
-    <p>
-      Soy <strong>Desarrollador Web Full Stack</strong> con experiencia en
-      tecnologías como Angular, Node.js y MongoDB, así como en la implementación de proyectos en plataformas como Firebase, MongoDB Atlas y Render. Me especializo en el desarrollo de aplicaciones web escalables y en la creación de soluciones innovadoras.
+    <p class="texto">
+      Soy Desarrollador Web Full Stack con experiencia en <strong>Angular, Node.js y MongoDB,</strong> así como en la implementación de proyectos en <strong>Firebase, MongoDB Atlas y Render.</strong>
+       He trabajado con APIs desarrolladas con Node.js, integrando los datos en Angular y desplegando las aplicaciones en las plataformas mencionadas. Además, utilizo <strong>Git y GitHub</strong> 
+       para la gestión y actualización continua de mis proyectos, asegurando un flujo de desarrollo ordenado y colaborativo.
+
     </p>
-    <p>
-      Actualmente me encuentro en búsqueda de nuevas oportunidades que me permitan
-      aportar mis conocimientos, enfrentar nuevos retos y continuar creciendo
-      profesionalmente.
+    <p class="texto">
+      Además, cuento con experiencia en <strong>desarrollo de CRUD'S utilizando XAMPP, MySQL y PHP,</strong>
+      habiendo trabajado con frameworks como <strong>CodeIgniter y Larevel.</strong> 
+    </p>
+    <p class="texto">
+      Me caracterizo por mi disposición para aprender, trabajar en equipo y colaborar,
+       siempre aportando al éxito de los proyectos, y estoy en constante búsqueda de 
+       crecimiento profesional y nuevas oportunidades que me permitan seguir 
+       desarrollándome y contribuyendo al desarrollo nuevas soluciones tecnologícas.
     </p>
   </section>
 
   <!-- Proyectos -->
-  <div class="container my-5">
-    <h2 class="mb-4">Proyectos</h2>
-    <div class="row g-4">
-      <!-- Card 1 -->
-      <div class="col-md-4">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">Página de administración de sistema de riego</h5>
-            <p class="card-text">Aplicación web para gestionar y monitorear el riego de cultivos de manera eficiente.</p>
-            <a href="html/proyectobrotes.html" class="btn btn-primary">Ver proyecto</a>
-          </div>
+<!-- Proyectos -->
+<div class="container my-5">
+  <h2 class="mb-4">Proyectos</h2>
+  <div class="row g-4">
+    <!-- Card 1 -->
+    <div class="col-md-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">Sistema de administración de riego</h5>
+          <p class="card-text texto">
+            Plataforma web que permite gestionar y monitorear el riego de plantas.
+            Incluye autenticación con JWT y conexión a base de datos en la nube, desarrollada con 
+            <strong>Angular, Node.js y MongoDB</strong>.
+          </p>
+          <a href="html/proyectobrotes.html" class="btn btn-primary">Ver proyecto</a>
         </div>
       </div>
+    </div>
 
-      <!-- Card 2 -->
-      <div class="col-md-4">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">Tienda online para galletas</h5>
-            <p class="card-text">E-commerce para la venta de galletas, con carrito de compras y sistema de pago en línea.</p>
-                        <a href="html/proyectogalletas.html" class="btn btn-primary">Ver proyecto</a>
-          </div>
+    <!-- Card 2 -->
+    <div class="col-md-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">Tienda online de galletas</h5>
+          <p class="card-text texto">
+            E-commerce funcional con catálogo de productos, carrito de compras y sistema de pagos.
+            Desarrollado con <strong>Angular, Node.js, MongoDB y JWT</strong> para la autenticación de usuarios.
+          </p>
+          <a href="html/proyectogalletas.html" class="btn btn-primary">Ver proyecto</a>
         </div>
       </div>
+    </div>
 
-      <!-- Card 3 -->
-      <div class="col-md-4">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title"></h5>
-            <p class="card-text"></p>
-          </div>
+    <!-- Card 3 -->
+    <div class="col-md-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">Gestión de empleados</h5>
+          <p class="card-text texto">
+            Aplicación local para la administración de empleados, con funcionalidades CRUD (crear, leer, actualizar, eliminar). 
+            Construida con <strong>Laravel, XAMPP y MySQL</strong>.
+          </p>
+          <a href="html/proyectoempleado.html" class="btn btn-primary">Ver proyecto</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="col-md-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">Gestión de telefonía y planes</h5>
+          <p class="card-text texto">
+            Sistema CRUD que administra clientes, planes y servicios de telefonía. 
+            Desarrollado con <strong>CodeIgniter, XAMPP y MySQL</strong>, optimizado para un manejo sencillo de múltiples tablas.
+          </p>
+          <a href="html/proyectotelefonia.html" class="btn btn-primary">Ver proyecto</a>
         </div>
       </div>
     </div>
   </div>
+</div>
+
+
+
+
 
   <!-- Habilidades -->
   <section class="container my-5">
@@ -167,7 +129,9 @@
       <span class="badge bg-info text-dark">Express</span>
       <span class="badge bg-dark">MongoDB</span>
       <span class="badge bg-light text-dark">MySQL</span>
-      <span class="badge bg-primary">Git</span>
+      <span class="badge bg-dark">Git</span>
+      <span class="badge bg-primary">Php</span>
+
     </div>
   </section>
 
